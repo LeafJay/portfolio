@@ -1,5 +1,5 @@
-import Link from "next/link";
 import "./globals.css";
+import Navbar from "../components/Navbar"
 
 export default function RootLayout({
   children,
@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header>
-          <nav></nav>
+          <Navbar />
         </header>
         <main className="container mx-auto">{children}</main>
       </body>
@@ -18,20 +18,3 @@ export default function RootLayout({
   );
 }
 
-function NavItem({
-  text,
-  href,
-  active,
-}: {
-  text: string;
-  href: string;
-  active: boolean;
-}) { 
-  return(
-  <div>
-    <Link href={href} className={`nav-item${active ? "-active" : "" }`}>
-      <h1>{text}</h1>
-    </Link>
-  </div>
-  )
-}
