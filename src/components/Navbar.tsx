@@ -1,4 +1,3 @@
-
 'use client'
 
 import Link from "next/link";
@@ -9,20 +8,22 @@ export default function NavBar() {
 
 
   const MENU_ITEM = [
-    {name : "Works", href : "/works/"},
-    {name : "About", href : "/about/"},
+    {name : "Works", href : "/works"},
+    {name : "About", href : "/about"},
   ]
 
   const pathname = usePathname();
 
   return(
     <nav className="flex w-full space-x-8">
-      <i className="flex-grow">Icon</i>
+      <div className="flex-grow">
+        <i>
+          <Link href="/">Home</Link>
+        </i>
+      </div>
 
       {MENU_ITEM.map((item,idx) => {
-        
         const isActive = pathname.startsWith(item.href)
-
         return (
           <NavItem name={item.name} href={item.href} key={idx} active={isActive}/>
         );
@@ -41,8 +42,8 @@ function NavItem({
   active: boolean;
 }) { 
   return(
-  <div>
-    <Link href={href} className={`nav--item${active ? "__active" : "" }`}>
+  <div className={active ? "nav--item__active" : "nav--item"}>
+    <Link href={href}>
       {name}
     </Link>
   </div>
