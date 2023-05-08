@@ -1,0 +1,8 @@
+.navItem {
+  @apply font-light hover:font-normal
+}
+
+.active {
+  @apply text-sky-300 font-normal
+}
+
