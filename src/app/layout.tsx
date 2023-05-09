@@ -12,8 +12,12 @@ export default function RootLayout({
         <header>
           <Navbar />
         </header>
-        <main className="container mx-auto">{children}</main>
+        <main className="container mx-auto shadow">{children}</main>
+
       </body>
+      <footer className="bg-black text-white">
+        Jeremie Allemand
+      </footer>
     </html>
   );
 }

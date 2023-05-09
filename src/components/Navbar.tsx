@@ -14,13 +14,14 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex w-full space-x-8 p-8 fixed top-0 shadow">
+    <nav className="fixed top-0 flex z-1 w-full space-x-8 p-8 shadow bg-white">
       <div className="flex-grow">
         <i>
           <Link href="/">Home</Link>
         </i>
       </div>
 
+      <span>En</span>
       {MENU_ITEM.map((item, idx) => {
         const isActive = pathname.startsWith(item.href);
         return (
