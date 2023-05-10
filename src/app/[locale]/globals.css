@@ -6,6 +6,10 @@
   @apply bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-50
 }
 
+.active{
+  @apply text-sky-600 dark:text-red-300
+}
+
 html {
   scroll-behavior:smooth;
 }

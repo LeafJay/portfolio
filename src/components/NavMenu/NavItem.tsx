@@ -12,7 +12,7 @@ export default function NavItem({
   active: boolean;
 }) {
   return (
-    <div >
+    <div className={active ? "active" : ""}>
       <Link href={href}>{name}</Link>
     </div>
   );

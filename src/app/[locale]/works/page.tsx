@@ -3,7 +3,7 @@ export default function WorksPage() {
     <>
       <section className="h-screen">
         <div className="h-full flex justify-center items-center flex-col">
-          <h1>
+          <h1 className="text-9xl text-center mb-16">
             Works
           </h1>
         </div>
