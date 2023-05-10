@@ -1,4 +1,4 @@
-export default function Works() {
+export default function WorksPage() {
   return(
     <>
       <section className="h-screen">

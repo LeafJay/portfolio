@@ -38,7 +38,7 @@ export default async function LocaleLayout({
             <main className="container mx-auto theme--colors">
               {children}
             </main>
-            <footer>
+            <footer className="flex h-60 items-center justify-center bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
               Jeremie Allemand
             </footer>
           </NextIntlClientProvider>

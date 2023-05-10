@@ -2,7 +2,7 @@
 
 import {Link, useTranslations} from 'next-intl';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <section className="h-screen">
