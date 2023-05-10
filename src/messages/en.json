@@ -1,0 +1,13 @@
+{
+  "NavMenu":{
+    "home":{
+      "name":"Home"
+    },
+    "about":{
+      "name":"About"
+    },
+    "works":{
+      "name":"Works"
+    }
+  }
+}

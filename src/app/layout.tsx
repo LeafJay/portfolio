@@ -1,24 +1,12 @@
-import "./globals.css";
-import Navbar from "../components/Navbar"
+import {ReactNode} from 'react';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body>
-        <header>
-          <Navbar />
-        </header>
-        <main className="container mx-auto shadow">{children}</main>
+type Props = {
+  children: ReactNode;
+};
 
-      </body>
-      <footer className="bg-black text-white">
-        Jeremie Allemand
-      </footer>
-    </html>
-  );
+// Even though this component is just passing its children through, the presence
+// of this file fixes an issue in Next.js 13.3.0 where link clicks that switch
+// the locale would otherwise be ignored.
+export default function RootLayout({children}: Props) {
+  return children;
 }
-

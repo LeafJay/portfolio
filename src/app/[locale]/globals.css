@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-title {
-  @apply font-bold text-left text-2xl mb-4;
+.theme--colors {
+  @apply bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-50
 }
 
 html {
