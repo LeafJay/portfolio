@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import clsx from "clsx";
-import {Link} from "next-intl";
+import { Link } from "next-intl";
 
 export default function NavItem({
   name,
