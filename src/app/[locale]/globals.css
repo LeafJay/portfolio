@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .theme--colors {
-  @apply bg-gray-50 text-gray-800 dark:bg-black dark:text-gray-50;
+  ;
 }
 
 .active {

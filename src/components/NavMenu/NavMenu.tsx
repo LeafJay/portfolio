@@ -9,7 +9,7 @@ export default function NavMenu() {
 
   const MENU_ITEMS = [
     { name: t("works.name"), href: "/works" },
-    { name: t("about.name"), href: "/about" },
+    { name: t("contact.name"), href: "/contact" },
   ];
 
   const pathname = usePathname();

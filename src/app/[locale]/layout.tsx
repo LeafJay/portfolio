@@ -3,7 +3,6 @@ import TopBar from "../../components/TopBar/TopBar";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import Providers from "@/components/Providers/Providers";
 
 type Props = {
   children: ReactNode;
@@ -22,19 +21,21 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} title="WEB J" suppressHydrationWarning={true}>
-      <body className="theme--colors">
-        <Providers>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <header>
-              <TopBar />
-            </header>
-            <main className="container mx-auto theme--colors">{children}</main>
-            <footer className="flex h-60 items-center justify-center bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-              Jeremie Allemand
-            </footer>
-          </NextIntlClientProvider>
-        </Providers>
+    <html lang={locale} title="WEB J">
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+
+          <header>
+            <TopBar />
+          </header>
+          
+          {children}
+
+          <footer className="flex h-60 items-center justify-center">
+            Jeremie Allemand
+          </footer>
+
+        </NextIntlClientProvider>
       </body>
     </html>
   );
